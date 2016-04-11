@@ -10,13 +10,13 @@
   6. Next go to the other terminal window.
   7. Type ./ncp yoursourcefile yourdestinationfile@computername and hit return.
   8. ncp should state that it is sending the source file to the destination file, 
-		the size of the source file, and the time to send.
+	the size of the source file, and the time to send.
   9. ncp will stop executing once it sends a single file. To send a new file, run the program again
   10. rcv should display packets being transferred, their size, and time to receive them
   11. rcv will remain waiting for new transfers. ctrl + c to exit rcv program. 
   If you wish to send more data to the SAME FILE you can continue to let this loop and send from the ncp function.
   If you wish to send more data to a NEW FILE you will need to ctrl + c out of rcv and re execute it before you send
-		new files from ncp.
+	new files from ncp.
 */
 
 #include<sys/socket.h>
@@ -36,12 +36,12 @@ main(int argc, char const *argv[])
     char destFileName[20];
     char compName[20];
     char *getAt;
-	int socketFile;
+    int socketFile;
     char fileNameBuf[1024] = "";
     char fileBuffer[1024] = "";
-	char readBuffer[1024] = "";
-	time_t start_t;
-	time_t end_t;
+    char readBuffer[1024] = "";
+    time_t start_t;
+    time_t end_t;
 	
     struct sockaddr_in sender, receiver;
 	ssize_t nread;
